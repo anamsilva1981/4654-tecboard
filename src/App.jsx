@@ -22,6 +22,24 @@ function App() {
         <img src="/banner.png" alt="" />
       </section>
       <FormularioDeEvento />
+      <section>
+        <Tema tema={temas[0]}/>
+      </section>
+      <section>
+        <Tema tema={temas[1]}/>
+      </section>
+      <section>
+        <Tema tema={temas[2]}/>
+      </section>
+      <section>
+        <Tema tema={temas[3]}/>
+      </section>
+      <section>
+        <Tema tema={temas[4]}/>
+      </section>
+      <section>
+        <Tema tema={temas[5]}/>
+      </section>
     </main>
   )
 }
