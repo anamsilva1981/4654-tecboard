@@ -1,5 +1,6 @@
 import './App.css'
 import { FormularioDeEvento } from './componentes/FormularioDeEvento'
+import { Tema } from './componentes/Tema'
 
 
 function App() {
