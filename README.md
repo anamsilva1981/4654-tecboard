@@ -2,26 +2,40 @@
 
 # Tecboard
 
-Seu hub de eventos de tecnologia! Este projeto foi construído com React e tem como objetivo facilitar a criação e visualização de eventos voltados para temas como Front-end, Back-end, Cloud e muito mais.
+Tecboard é um painel de eventos de tecnologia criado com React. O projeto permite cadastrar eventos com título, imagem de capa, data e tema, organizando os cards automaticamente por categoria.
 
-## 🔨 Funcionalidades do projeto
-
-- Criação de eventos personalizados com imagem, título, data e tema.
-- Organização dos eventos por tema.
-- Persistência dos dados em memória (estado local do React).
+Este repositório foi desenvolvido como portfólio de aprendizado em React, com foco em componentização, estado local, formulários e estilização com CSS.
 
 ![Screenshot do projeto](screencapture.png)
 
-## ✔️ Técnicas e tecnologias utilizadas
+## Funcionalidades
 
-- **React + Vite**: Estrutura leve para desenvolvimento com React.
-- **useState**: Para gerenciamento do estado local dos eventos.
-- **Componentização**: Separação clara de responsabilidades por componente.
-- **Formulários com `FormData`**: Captura de dados estruturada.
-- **CSS Modules**: Estilos organizados por componente com escopo local.
-- **Google Fonts (Work Sans + Orbitron)**: Tipografia personalizada.
+- Cadastro de eventos personalizados.
+- Organização dos eventos por tema.
+- Renderização condicional das seções que possuem eventos.
+- Validação básica dos campos do formulário.
+- Estado local com `useState`.
+- Layout responsivo para a listagem de cards.
 
-## 🛠️ Como rodar o projeto
+## Tecnologias Utilizadas
+
+- React
+- Vite
+- JavaScript
+- CSS
+- ESLint
+
+## Conceitos Praticados
+
+- Criação e composição de componentes.
+- Passagem de dados por `props`.
+- Manipulação de formulários com `FormData`.
+- Atualização de listas com estado imutável.
+- Renderização de listas com `map` e `filter`.
+- Renderização condicional.
+- Organização de estilos por componente.
+
+## Como Rodar o Projeto
 
 1. Clone o repositório:
 
@@ -36,7 +50,7 @@ cd tecboard
 npm install
 ```
 
-3. Rode o projeto localmente:
+3. Execute o projeto em modo de desenvolvimento:
 
 ```bash
 npm run dev
@@ -44,35 +58,68 @@ npm run dev
 
 4. Acesse no navegador:
 
-```
+```txt
 http://localhost:5173
 ```
 
-**Imagens disponíveis:**
+## Scripts Disponíveis
 
-- `imagem_1.png` até `imagem_15.png`
-- `imagem_extra_1.png` até `imagem_extra_15.png`
+```bash
+npm run dev
+```
 
-**Formato de uso direto no projeto:**
+Inicia o servidor de desenvolvimento.
+
+```bash
+npm run build
+```
+
+Gera a versão de produção na pasta `dist`.
+
+```bash
+npm run preview
+```
+
+Executa uma prévia local da versão de produção.
+
+```bash
+npm run lint
+```
+
+Analisa o código com ESLint.
+
+## Imagens de Exemplo
+
+O projeto pode usar imagens públicas do repositório de assets abaixo:
 
 ```txt
 https://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_1.png
 https://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_extra_9.png
 ```
 
-## 📚 Sobre o projeto
+Estão disponíveis imagens no padrão `imagem_1.png` até `imagem_15.png` e `imagem_extra_1.png` até `imagem_extra_15.png`.
 
-Esse projeto foi desenvolvido com fins educacionais para praticar:
+## Estrutura do Projeto
 
-- Componentização no React.
-- JSX.
-- Manipulação de formulários e dados.
-- Estilização com CSS.
-- Uso de props e renderização condicional.
+```txt
+src/
+  componentes/
+    Banner/
+    Botao/
+    CampoDeEntrada/
+    CampoDeFormulario/
+    CardEvento/
+    FormularioDeEvento/
+    Label/
+    ListaSuspensa/
+    Tema/
+    TituloFormulario/
+  App.jsx
+  main.jsx
+```
 
-Ideal para quem quer dar os primeiros passos em React criando algo visual, interativo e útil.
+## Aprendizados
 
-Se quiser adicionar deploy com Vercel, persistência com LocalStorage ou backend com Firebase, este projeto é uma ótima base para evoluir!
+Este projeto reforça fundamentos importantes do React, principalmente a criação de interfaces a partir de componentes reutilizáveis e a atualização da tela a partir de mudanças no estado da aplicação.
 
-Vida longa e próspera 🖖
-
+Como próximos passos, o projeto pode evoluir com persistência em `localStorage`, edição e remoção de eventos, filtros por tema e deploy em plataformas como Vercel ou Netlify.
