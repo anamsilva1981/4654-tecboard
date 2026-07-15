@@ -1,9 +1,9 @@
-import './banner.estilos.css';
+import './banner.estilos.css'
 
-export function Banner(){
-    return(
+export function Banner() {
+    return (
         <section className='banner'>
-            <img src="/banner.png" alt="banner pagina central" />
+            <img src="/banner.png" alt="" />
         </section>
     )
 }

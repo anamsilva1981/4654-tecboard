@@ -1,7 +1,6 @@
-import './botao.estilos.css';
+import './botao.estilos.css'
 
-
-export function Botao({children}){
+export function Botao({ children }) {
     return (
         <button className='botao'>
             {children}
