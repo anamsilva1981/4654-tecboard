@@ -7,21 +7,24 @@ import { Botao } from '../Botao';
 import { ListaSuspensa } from '../ListaSuspensa';
 
 
-export function FormularioDeEvento({ temas }) {
+export function FormularioDeEvento({ temas, onSubmit }) {
+  function criarEvento(formData) {
+    console.log('Envia dados do formulário', formData);
 
-  function onsubmit(FormData) {
-    console.log('Envia dados do formulario', FormData)
     const evento = {
-      capa: FormData.get('capa'),
-      tema: temas.find(function (item) { return item.id == FormData.get('tema')}),
-      data: new Date(FormData.get('dataDoEvento')),
-      titulo: FormData.get('nomeDoEvento')
-    }
-    console.log('Esse é o evento', evento)
+      capa: formData.get('capa'),
+      tema: temas.find(
+        item => item.id === Number(formData.get('tema'))
+      ),
+      data: new Date(formData.get('dataDoEvento')),
+      titulo: formData.get('nomeDoEvento')
+    };
+
+    onSubmit(evento);
   }
 
   return (
-    <form className="form-evento" action={onsubmit}>
+    <form className="form-evento" action={criarEvento}>
       <TituloFormulario>
         Preencha para criar um evento:
       </TituloFormulario>
